@@ -1,9 +1,9 @@
-const { Transactions } = require('../models');
+const { transactions } = require('../models');
 
 class TransactionsService {
     async createTransaction(transaction) {
         try {
-            const transactionDetails = await Transactions.create(transaction);
+            const transactionDetails = await transactions.create(transaction);
             return transactionDetails;
         } catch (err) {
             throw err;
